@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ForumApplication implements CommandLineRunner {
 
 	@Autowired
-	private TopicRepository topicRepository; // Injeta o repositório de tópicos
+	private TopicRepository topicRepository; 
 
 	public static void main(String[] args) {
 		SpringApplication.run(ForumApplication.class, args);
@@ -19,10 +19,10 @@ public class ForumApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-		// Testando a funcionalidade do repositório
+		
 		System.out.println("Iniciando o ForumApplication...");
 
-		// Criando um novo tópico
+		
 		Topic topic = new Topic();
 		topic.setTitle("Bem-vindo ao Fórum!");
 		topic.setContent("Este é o primeiro tópico do Fórum Wizards.");
