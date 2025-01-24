@@ -31,7 +31,6 @@ public class ForumApplication implements CommandLineRunner {
 		topicRepository.create(topic);
 		System.out.println("Tópico criado com sucesso!");
 
-		// Lendo o tópico criado
 		Topic retrievedTopic = topicRepository.read(1);
 		if (retrievedTopic != null) {
 			System.out.println("Tópico lido: " + retrievedTopic.getTitle());

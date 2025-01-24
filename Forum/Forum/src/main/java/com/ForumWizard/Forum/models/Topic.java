@@ -6,10 +6,10 @@ public class Topic {
     private String content;
     private int userId; // ID do usuário associado ao tópico
 
-    // Construtor padrão
+
     public Topic() {}
 
-    // Construtor com argumentos
+    
     public Topic(int id, String title, String content, int userId) {
         this.id = id;
         this.title = title;
@@ -17,7 +17,7 @@ public class Topic {
         this.userId = userId;
     }
 
-    // Getters e Setters
+ 
     public int getId() {
         return id;
     }
