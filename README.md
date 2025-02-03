@@ -25,21 +25,52 @@ Este projeto é um fórum criado especificamente para o time de futebol american
 - **Estrutura de Pastas:**
   ```plaintext
   src/
-  |-- models/
-  |   |-- User.java
-  |   |-- NormalUser.java
-  |   |-- CTUser.java
-  |   |-- Topic.java
-  |   |-- Message.java
-  |
-  |-- services/
-  |   |-- ChatService.java
-  |
-  |-- utils/
-  |
-  |-- Main.java
-  |-- Forum.java
-  ```
+  ├── main/
+  │   ├── java/
+  │   │   └── com/
+  │   │       └── forumfootball/
+  │   │           ├── domain/              # Camada de Domínio (Entidades e Regras de Negócio)
+  │   │           │   ├── model/
+  │   │           │   │   ├── user/        # Entidades de Usuário
+  │   │           │   │   │   ├── User.java
+  │   │           │   │   │   ├── Athlete.java
+  │   │           │   │   │   ├── CT.java
+  │   │           │   │   │   └── Admin.java
+  │   │           │   │   ├── forum/       # Entidades do Fórum
+  │   │           │   │   │   ├── Forum.java
+  │   │           │   │   │   ├── Topic.java
+  │   │           │   │   │   └── Comment.java
+  │   │           │   │   └── chat/        # Entidades de Chat
+  │   │           │   │       ├── Chat.java
+  │   │           │   │       └── Message.java
+  │   │           │   ├── enums/
+  │   │           │   │   ├── UserType.java
+  │   │           │   │   └── ChatType.java
+  │   │           │   └── exceptions/      # Exceções Customizadas
+  │   │           │       └── ValidationException.java
+  │   │           ├── application/         # Casos de Uso e Serviços
+  │   │           │   ├── service/
+  │   │           │   │   ├── UserService.java
+  │   │           │   │   ├── ForumService.java
+  │   │           │   │   ├── ChatService.java
+  │   │           │   │   └── HallOfFameService.java
+  │   │           │   └── validation/      # Validações Específicas
+  │   │           │       └── UserValidator.java
+  │   │           ├── infrastructure/      # Implementações de Infraestrutura
+  │   │           │   ├── repository/
+  │   │           │   │   ├── UserRepository.java
+  │   │           │   │   ├── ForumRepository.java
+  │   │           │   │   └── ChatRepository.java
+  │   │           │   └── auth/
+  │   │           │       └── AuthManager.java  # Autenticação e Autorização
+  │   │           └── presentation/        # Interface com o Usuário (CLI/Web)
+  │   │               ├── cli/
+  │   │               │   ├── ForumCLI.java
+  │   │               │   └── MenuManager.java
+  │   │               └── dto/             # Objetos de Transferência de Dados
+  │   │                   └── UserDTO.java
+  │   └── resources/                       # Configurações e Mensagens
+  └── test/                                # Testes Unitários e Integração
 
 - **Descrição das Classes:**
   - `User.java`: Classe base para todos os usuários.
